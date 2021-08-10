@@ -250,6 +250,7 @@ div.activity div.title
     font-weight:bold;
     font-size:0.9rem;
     padding:10px;
+    padding-top:2px;
 }
 div.timeline
 {
@@ -289,6 +290,10 @@ div.content span.text
 .starred
 {
     color:#E3EB59;
+}
+.unstarred,.inactive
+{
+    color:grey;
 }
 .active
 {
