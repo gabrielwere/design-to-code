@@ -74,7 +74,7 @@ img#logo
 section#content
 {
     display: flex;
-    padding:25px;
+    /* padding:25px; */
 }
 
 section div.profile,section div.activity
@@ -93,10 +93,13 @@ section div.profile
 {
     font-size:0.8rem;
     font-weight:bold;
+    padding:25px;
+    padding-left:40px;
 }
 section div div.personalInfo
 {
     display:flex;
+    padding:10px;
 }
 section div div span div
 {
@@ -115,7 +118,7 @@ div.newProject,div.inviteTeam
     text-align:center;
     padding:8px;
     margin:10px;
-    width:70%;
+    width:80%;
     border-radius:8px;
     cursor: pointer;
 }
@@ -144,12 +147,18 @@ div.memberInfo i
 }
 section div.projectsSection
 {
-    flex:2;
+    flex:2.5;
+    border-left:0.1px solid grey;
+    border-right:0.1px solid grey;
+    /* padding:25px; */
+    padding-top:20px;
+    /* padding-bo:20px; */
 }
 div.projectsHeader
 {
     display:flex;
     padding:20px;
+    border-bottom:0.1px grey solid;
 }
 div.projectsHeader span.title
 {
@@ -166,22 +175,29 @@ div.projectsHeader span.sort
     border-radius:5px;
     padding:5px;
     cursor: pointer;
+    color:black;
+    font-weight: bold;
 }
 div.projectsHeader span.sort i
 {
     padding:5px;
     color:grey;
 }
-div.projects div.projectName
+div.projects
+{
+    padding:10px;
+    padding-top:20px;
+    border-bottom:0.1px grey solid;
+}
+div.projectName
 {
     display:flex;
     font-weight:bold;
     font-size:0.8rem;
-    padding:10px;
 }
 div.projects div.projectName span.section1
 {
-    flex:3;
+    flex:5;
     /* padding:5px; */
 }
 div.projects div.projectName span.section2
@@ -201,19 +217,16 @@ div.projects div.projectDetails
 }
 div.projects div.projectDetails span.section1
 {
-    flex:0.7;
+    flex:0.8;
     font-weight:bolder;
     color:grey;
+    padding-left:5px;
 }
 div.projects div.projectDetails span.section2
 {
     flex:1;
     color:grey;
     font-weight:bold;
-}
-div.projects div.projectDetails ul
-{
-    list-style-type: none;
 }
 div.projectsSection div.projectDetails ul li
 {
@@ -228,13 +241,15 @@ section div.activity
 {
     display:flex;
     flex-direction: column;
-    padding:15px;
+    padding:10px;
+    padding-top:40px;
 }
 div.activity div.title
 {
     color:black;
     font-weight:bold;
     font-size:0.9rem;
+    padding:10px;
 }
 div.timeline
 {
@@ -256,6 +271,11 @@ div.timeline span.section2
     flex:1;
     
 }
+div.content
+{
+    padding-bottom:10px;
+    border-bottom:0.1px grey solid;
+}
 div.content span.text
 {
     font-weight:bold;
@@ -264,7 +284,7 @@ div.content span.text
     padding:10px;
     display:flex;
     align-items:flex-start;
-    line-height:1rem;
+    line-height:1.2rem;
 }
 .starred
 {
