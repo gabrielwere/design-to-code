@@ -89,9 +89,13 @@ section#content
     /* padding:25px; */
 }
 
-section div.profile,section div.activity
+section div.profile
 {
-    flex:1;
+    flex:0.9;
+}
+section div.activity
+{
+    flex:1.1;
 }
 img.projectsImage
 {
@@ -242,14 +246,20 @@ div.projects div.projectDetails span.section1
 }
 div.projects div.projectDetails span.section2
 {
-    flex:1;
+    flex:1.3;
     color:grey;
     font-weight:bold;
 }
+div.projectsSection div.projectDetails ul
+{
+    display: flex;
+    align-items:center;
+}
 div.projectsSection div.projectDetails ul li
 {
-    display:inline;
-    margin:5px;
+    margin:7px;
+    padding:5px;
+    padding-left:1px;
 }
 div.projects div.projectDetails i
 {
