@@ -17,7 +17,8 @@ header
     align-items: center;
     background-color:#5E55DE;
 }
-header div.logo,header div.nav{
+header div.logo,header div.nav
+{
     margin:0;
     flex:1;
 }
@@ -30,15 +31,30 @@ header div.searchBar
     font-size:0.75rem;
     font-weight: bold;
     cursor:pointer;
-    color:lightgrey;
+    color:grey;
     background-color:#868DD8;
 
 }
-header div.searchBar span i
+header div.searchBar form input
+{
+    border:none;
+    border-radius: 5px;
+    background-color:#868DD8;
+    outline:none;
+    width:90%;
+}
+header div.searchBar form input::placeholder
+{
+    color:lightgrey;
+}
+header div.searchBar form button
 {
     padding-right:10px;
     padding-left:5px;
     color:lightgrey;
+    background-color:#868DD8;
+    border:none;
+    cursor: pointer;
 }
 header div nav ul
 {
