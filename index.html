@@ -5,17 +5,22 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width = device-width, initial-scale = 1.0"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/index.css"/>
     </head>
 
     <body>
 
         <header>
-            <a href="index.html" id="logo"><img src="images/logo.png" alt="Logo"></a>
-
-            <div id="searchBar">
-                <span><i class="fa fa-search"></i>Search Projects</span>
+            
+            <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Logo" id="logo"></a>
             </div>
 
+            <div class="searchBar">
+                <span><i class="fa fa-search"></i>Search projects</span>
+            </div>
+
+            <div class="nav">
             <nav id="navBar">
                 <ul>
                     <li><a href="#">Dashboard</a></li>
@@ -23,6 +28,7 @@
                     <li><a href="#"><img src="images/profile.jpeg" alt="Profile Picture"></a></li>
                 </ul>
             </nav>
+            </div>
         </header>
 
         <section id="content">
@@ -31,22 +37,21 @@
 
                 <div class="personalInfo">
 
-                    <span><img src="images/profile.jpeg" alt="Profile Picture"></span>
-                    <span>Debbie Lewis</span>
-                    <span class="github"><i class="fa fa-github"></i>debbielewis</span>
+                    <span><img src="images/profile.jpeg" alt="Profile Picture" class="projectsImage"></span>
+                    <span><div>Debbie Lewis</div><div><i class="fa fa-github"></i>debbielewis</div></span>
                 </div>
 
-                <div>
+                <div class="newProject">
                     New Project
                 </div>
 
-                <div>
+                <div class="inviteTeam">
                     Invite Team
                 </div>
 
                 <div class="memberInfo">
-                    <span><i class="fa fa-check-square-o"></i>Pro member</span>
-                    <span><i class="fa fa-folder-open"></i> Projects</span>
+                    <span><i class="fa fa-check-square-o"></i>Pro Member</span>
+                    <span><i class="fa fa-folder-open"></i>8 Projects</span>
                 </div>
             </div>
 
@@ -57,30 +62,33 @@
                     <span class="sort">
                         <i class="fa fa-indent"></i>
                         Sort
-                        <i class="fa fa-angle-down"></i></span>
+                        <i class="fa fa-angle-down"></i>
+                    </span>
                 </div>
 
                 <div class="projects">
 
                     <div class="projectName">
-                        <span>
-                            <i class="fa fa-dot-circle-o"></i>
+                        <span class="section1">
+                            <i class="fa fa-dot-circle-o active"></i>
                             Workcation
                         </span>
 
-                        <span>
-                            <i class="fa fa-github"></i>
-                            debbielewis/workcation
-                        </span>
-                    </div>
-
-                    <div class="projectDetails">
-                        <span>
+                        <span class="section2">
                             Visit site
                             <i class="fa fa-star starred"></i>
                         </span>
 
-                        <span>
+                    </div>
+
+                    <div class="projectDetails">
+
+                        <span class="section1">
+                            <i class="fa fa-github"></i>
+                            debbielewis/workcation
+                        </span>
+
+                        <span class="section2">
                             <ul>
                                 <li>Laravel</li>
                                 <li>Last Deploy 3h ago</li>
@@ -92,7 +100,7 @@
                 
                 </div>
 
-                <div class="projects">
+                <!-- <div class="projects">
 
                     <div class="projectName">
                         <span>
@@ -279,90 +287,98 @@
                     </div>
 
                 
-                </div>
+                </div> -->
             </div>
 
             <div class="activity">
-                <span class="title">
+                <div class="title">
                     Activity 
-                </span>
+                </div>
 
-                <span class="activityDetails">
-                    <img src="images/profile.jpeg" alt="Profile Picture">
+                <div class="content">
+
                     <div class="timeline">
-                        You
-                        <span>
+
+                        <span class="section1">
+                            <img src="images/profile.jpeg" alt="Profile Picture" class="activityImage">
+                            You
+                        </span>
+
+                        <span class="section2">
                             1h
                         </span>
-                    </div>
-                    <span class="text">Deployed  Workcation to production</span>
-                </span>
 
-                <span class="activityDetails">
-                    <img src="images/profile.jpeg" alt="Profile Picture">
-                    <div class="timeline">
-                        You
-                        <span>
-                            1h
-                        </span>
                     </div>
-                    <span class="text">Deployed  KiteTail to staging</span>
-                </span>
+                    <span class="text">Deployed Workcation(2d89f0c8 in master) to production</span>
+    
+                    <!-- <span class="activityDetails">
+                        <img src="images/profile.jpeg" alt="Profile Picture" class="activityImage">
+                        <div class="timeline">
+                            You
+                            <span>
+                                1h
+                            </span>
+                        </div>
+                        <span class="text">Deployed  KiteTail to staging</span>
+                    </span>
+    
+                    <span class="activityDetails">
+                        <img src="images/profile.jpeg" alt="Profile Picture" class="activityImage">
+                        <div class="timeline">
+                            You
+                            <span>
+                                1h
+                            </span>
+                        </div>
+                        <span class="text">Deployed  Workcation to staging</span>
+                    </span>
+    
+                    <span class="activityDetails">
+                        <img src="images/profile.jpeg" alt="Profile Picture" class="activityImage">
+                        <div class="timeline">
+                            You
+                            <span>
+                                1h
+                            </span>
+                        </div>
+                        <span class="text">Deployed EasyWire to production</span>
+                    </span>
+    
+                    <span class="activityDetails">
+                        <img src="images/profile.jpeg" alt="Profile Picture" class="activityImage">
+                        <div class="timeline">
+                            You
+                            <span>
+                                1h
+                            </span>
+                        </div>
+                        <span class="text">Deployed  EasyWire to production</span>
+                    </span>
+    
+                    <span class="activityDetails">
+                        <img src="images/profile.jpeg" alt="Profile Picture" class="activityImage">
+                        <div class="timeline">
+                            You
+                            <span>
+                                1h
+                            </span>
+                        </div>
+                        <span class="text">Deployed  Workcation to production</span>
+                    </span>
+    
+                    <span class="activityDetails">
+                        <img src="images/profile.jpeg" alt="Profile Picture" class="activityImage">
+                        <div class="timeline">
+                            You
+                            <span>
+                                1h
+                            </span>
+                        </div>
+                        <span class="text">Deployed  Resumemaid to staging</span>
+                    </span> -->
+                </div>
 
-                <span class="activityDetails">
-                    <img src="images/profile.jpeg" alt="Profile Picture">
-                    <div class="timeline">
-                        You
-                        <span>
-                            1h
-                        </span>
-                    </div>
-                    <span class="text">Deployed  Workcation to staging</span>
-                </span>
-
-                <span class="activityDetails">
-                    <img src="images/profile.jpeg" alt="Profile Picture">
-                    <div class="timeline">
-                        You
-                        <span>
-                            1h
-                        </span>
-                    </div>
-                    <span class="text">Deployed EasyWire to production</span>
-                </span>
-
-                <span class="activityDetails">
-                    <img src="images/profile.jpeg" alt="Profile Picture">
-                    <div class="timeline">
-                        You
-                        <span>
-                            1h
-                        </span>
-                    </div>
-                    <span class="text">Deployed  EasyWire to production</span>
-                </span>
-
-                <span class="activityDetails">
-                    <img src="images/profile.jpeg" alt="Profile Picture">
-                    <div class="timeline">
-                        You
-                        <span>
-                            1h
-                        </span>
-                    </div>
-                    <span class="text">Deployed  Workcation to production</span>
-                </span>
-
-                <span class="activityDetails">
-                    <img src="images/profile.jpeg" alt="Profile Picture">
-                    <div class="timeline">
-                        You
-                        <span>
-                            1h
-                        </span>
-                    </div>
-                    <span class="text">Deployed  Resumemaid to staging</span>
-                </span>
+                
             </div>
         </section>
     </body>

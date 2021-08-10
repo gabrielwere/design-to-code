@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+:root
+{
+    --global-font:'Inter', sans-serif;
+}
+body
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: var(--global-font);
+    height: 100%;
+}
+header
+{
+    display: flex;
+    align-items: center;
+    background-color:#5E55DE;
+}
+header div.logo,header div.nav{
+    margin:0;
+    flex:1;
+}
+header div.searchBar
+{
+    flex:1.5;
+    border:1px colorless solid;
+    border-radius: 5px;
+    padding: 8px;
+    font-size:0.75rem;
+    font-weight: bold;
+    flex-basis:-100%;
+    cursor:pointer;
+    color:lightgrey;
+    background-color:#868DD8;
+
+}
+header div.searchBar span i
+{
+    padding-right:10px;
+    padding-left:5px;
+    color:lightgrey;
+}
+header div nav ul
+{
+    list-style-type: none;
+}
+header div nav ul li
+{
+    display: inline;
+    
+}
+header div nav ul li a
+{
+    text-decoration:none;
+    font-size:0.8rem;
+    font-weight: bold;
+    color:lightgrey;
+    padding:10px;
+}
+header div nav ul li a img
+{
+    width:25px;
+    height: 25px;
+    border-radius: 50%;
+}
+img#logo
+{
+    width:70px;
+    height: 70px;
+    margin-left:25px;
+    margin-bottom: 15px;
+}
+section#content
+{
+    display: flex;
+    padding:25px;
+}
+
+section div.profile,section div.activity
+{
+    flex:1;
+}
+img.projectsImage
+{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    padding:5px;
+
+}
+section div.profile
+{
+    font-size:0.8rem;
+    font-weight:bold;
+}
+section div div.personalInfo
+{
+    display:flex;
+}
+section div div span div
+{
+    padding:5px;
+}
+section div div span div i
+{
+    padding-right:5px;
+    color:grey;
+}
+
+div.newProject,div.inviteTeam
+{
+    font-weight:bold;
+    border:1px solid grey;
+    text-align:center;
+    padding:8px;
+    margin:10px;
+    width:70%;
+    border-radius:8px;
+    cursor: pointer;
+}
+
+div.newProject
+{
+    color:white;
+    background-color:#5E55DE;
+}
+
+div.inviteTeam
+{
+    color:#272831;
+}
+
+div.memberInfo
+{
+    display:flex;
+    flex-direction:column;
+    color:grey;
+    padding:8px;
+}
+div.memberInfo i
+{
+    padding:8px;
+}
+section div.projectsSection
+{
+    flex:2;
+}
+div.projectsHeader
+{
+    display:flex;
+    padding:20px;
+}
+div.projectsHeader span.title
+{
+    flex:2;
+    font-weight:bold;
+    font-size:1.2rem;
+}
+div.projectsHeader span.sort
+{
+    flex:0.5;
+    border:1px grey solid;
+    font-size:0.9rem;
+    text-align:center;
+    border-radius:5px;
+    padding:5px;
+    cursor: pointer;
+}
+div.projectsHeader span.sort i
+{
+    padding:5px;
+    color:grey;
+}
+div.projects div.projectName
+{
+    display:flex;
+    font-weight:bold;
+    font-size:0.8rem;
+    padding:10px;
+}
+div.projects div.projectName span.section1
+{
+    flex:3;
+    /* padding:5px; */
+}
+div.projects div.projectName span.section2
+{
+    flex:1;
+    color:grey;
+}
+div.projects div.projectName span i
+{
+    padding:5px;
+}
+div.projects div.projectDetails
+{
+    display:flex;
+    align-items:center;
+    font-size:0.8rem;
+}
+div.projects div.projectDetails span.section1
+{
+    flex:0.7;
+    font-weight:bolder;
+    color:grey;
+}
+div.projects div.projectDetails span.section2
+{
+    flex:1;
+    color:grey;
+    font-weight:bold;
+}
+div.projects div.projectDetails ul
+{
+    list-style-type: none;
+}
+div.projectsSection div.projectDetails ul li
+{
+    display:inline;
+    margin:5px;
+}
+div.projects div.projectDetails i
+{
+    color:grey;
+}
+section div.activity
+{
+    display:flex;
+    flex-direction: column;
+    padding:15px;
+}
+div.activity div.title
+{
+    color:black;
+    font-weight:bold;
+    font-size:0.9rem;
+}
+div.timeline
+{
+    display:flex;
+    align-items:center;
+    color:grey;
+    font-weight:bold;
+    font-size:0.85rem;
+}
+div.timeline span.section1
+{
+    flex:3;
+    color:black;
+    display:flex;
+    align-items:center;
+}
+div.timeline span.section2
+{
+    flex:1;
+    
+}
+div.content span.text
+{
+    font-weight:bold;
+    color:grey;
+    font-size:0.8rem;
+    padding:10px;
+    display:flex;
+    align-items:flex-start;
+    line-height:1rem;
+}
+.starred
+{
+    color:#E3EB59;
+}
+.active
+{
+    color:green;
+}
+img.activityImage
+{
+    width:20px;
+    height: 20px;
+    border-radius:50%;
+    padding:10px;
+}
