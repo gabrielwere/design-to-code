@@ -225,7 +225,7 @@ div.projectName
 }
 div.projects div.projectName span.section1
 {
-    flex:5;
+    flex:6;
     /* padding:5px; */
 }
 div.projects div.projectName span.section2
@@ -235,7 +235,8 @@ div.projects div.projectName span.section2
 }
 div.projects div.projectName span i
 {
-    padding:5px;
+    padding-left:8px;
+    padding-right:8px;
 }
 div.projects div.projectDetails
 {
@@ -264,8 +265,9 @@ div.projectsSection div.projectDetails ul
 div.projectsSection div.projectDetails ul li
 {
     margin:7px;
+    margin-bottom:3px;
     padding:5px;
-    padding-left:1px;
+    padding-left:3px;
 }
 div.projects div.projectDetails i
 {
