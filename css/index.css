@@ -15,7 +15,8 @@ header
 {
     display: flex;
     align-items: center;
-    background-color:#5E48C7;
+    /* background-color:#592ADA; */
+    background-color: #414EC9;
 }
 header div.logo,header div.nav
 {
@@ -32,14 +33,14 @@ header div.searchBar
     font-weight: bold;
     cursor:pointer;
     color:grey;
-    background-color:#6C56D3;
+    background-color:#5D69D0;
 
 }
 header div.searchBar form input
 {
     border:none;
     border-radius: 5px;
-    background-color:#6C56D3;
+    background-color:#5D69D0;
     outline:none;
     width:90%;
 }
@@ -52,7 +53,7 @@ header div.searchBar form button
     padding-right:10px;
     padding-left:5px;
     color:lightgrey;
-    background-color:#6C56D3;
+    background-color:#5D69D0;
     border:none;
     cursor: pointer;
 }
@@ -82,6 +83,7 @@ i#logo
 {
     margin-left:25px;
     margin-bottom: 15px;
+    color:#8993EF;
 }
 section#content
 {
@@ -146,7 +148,7 @@ div.newProject,div.inviteTeam
 div.newProject
 {
     color:white;
-    background-color:#5E48C7;
+    background-color:#4616C9;
 }
 
 div.inviteTeam
