@@ -13,7 +13,7 @@ import com.google.gson.Gson;
 import com.model.Owner;
 import com.dao.OwnerDAO;
 
-@WebServlet("/owner")
+@WebServlet("/owner/*")
 public class OwnerController extends HttpServlet {
 
     
