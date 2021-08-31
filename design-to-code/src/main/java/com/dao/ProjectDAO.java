@@ -4,8 +4,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 
-// import java.sql.Timestamp;
+
 import com.model.Project;
 
 public class ProjectDAO {
@@ -63,6 +64,32 @@ public class ProjectDAO {
             return null;
         }
        
+    }
+
+    public ArrayList<Project> getAllProjects(){
+
+        String sqlStatement = "SELECT programmingLanguage,projectName,deployTime FROM project;";
+
+        PreparedStatement statement = dbDet.createStatement(sqlStatement);
+
+        try{
+            ResultSet rs = statement.executeQuery();
+            ArrayList<Project> projects = new ArrayList<Project>();
+
+            Project project = null;
+            while(rs.next()){
+                String programmingLanguage = rs.getString("programmingLanguage");
+                String projName = rs.getString("projectName");
+                Timestamp deployTime = rs.getTimestamp("deployTime");
+                project = new Project(programmingLanguage,projName,deployTime);
+                projects.add(project);
+            }
+
+            return projects;
+        }catch(SQLException e){
+            System.out.println(e);
+            return null;
+        }
     }
 
     

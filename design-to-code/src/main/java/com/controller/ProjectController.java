@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 // import java.io.PrintWriter;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -48,8 +49,24 @@ public class ProjectController extends HttpServlet{
 
         String pathInfo = req.getPathInfo();
 
-        if(pathInfo == null || pathInfo.equals("/")){
+        if(pathInfo == null){
             res.sendError(HttpServletResponse.SC_BAD_REQUEST);
+            return;
+        }
+
+        if(pathInfo.equals("/")){
+            ProjectDAO projectDAO = new ProjectDAO();
+
+            ArrayList<Project> projects = projectDAO.getAllProjects();
+
+            res.setContentType("application/json");
+
+            Gson gson = new Gson();
+            String response = gson.toJson(projects);
+
+            PrintWriter out = res.getWriter();
+
+            out.println(response);
             return;
         }
 
