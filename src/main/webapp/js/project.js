@@ -15,6 +15,50 @@ function closeForm(){
 newProject.addEventListener("click",displayForm);
 closeFormButton.addEventListener("click",closeForm);
 
+const projectsSection  = document.querySelector('.projectsSection');
+
+
+//SORT THE PROJECTS
+
+let lastModifiedButton = document.getElementById("lastModified")
+let firstModifiedButton = document.getElementById("firstModified");
+let sorted = false
+
+function sortProjects(){
+
+    if(sorted == true){
+        firstModifiedButton.classList.remove("visible")
+        firstModifiedButton.classList.add("invisible")
+
+        lastModifiedButton.classList.add("visible")
+        lastModifiedButton.classList.remove("invisible")
+
+        let projects = document.querySelectorAll(".projects")
+
+        for(let i=(projects.length -1);i>=0;i--){
+            projectsSection.appendChild(projects[i])
+        }
+        sorted = false
+        return
+    }
+    let projects = document.querySelectorAll(".projects")
+
+    for(let i=(projects.length -1);i>=0;i--){
+        projectsSection.appendChild(projects[i])
+    }
+
+    firstModifiedButton.classList.remove("invisible")
+    firstModifiedButton.classList.add("visible")
+
+    lastModifiedButton.classList.add("invisible")
+    lastModifiedButton.classList.remove("visible")
+    sorted = true
+}
+
+lastModifiedButton.addEventListener("click",sortProjects)
+firstModifiedButton.addEventListener("click",sortProjects)
+
+
 //GET ALL PROJECTS
 function getAllProjects(){
 
@@ -73,8 +117,31 @@ function getAllProjects(){
             let str1 = value.programmingLanguage.toString();
             let dataProgLanguage = str1.charAt(0).toUpperCase() + str1.slice(1)
 
+            //CALCULATE LAST DEPLOYED DATE
+            let date = new Date(value.deployTime)
+
+            let date2 = new Date()
+
+            let var1 = date2.getTime()
+
+            const diffTime = Math.abs(var1 - date);
+            let content;
+            let dateText
+            if((content = Math.floor(diffTime/(1000 * 60 * 60 *24 * 7)))>0){
+                dateText = `Last deployed ${content} w ago`
+            }else if((content = Math.floor(diffTime/(1000 * 60 * 60 * 24)))>0){
+                dateText = `Last deployed ${content} d ago`;
+            }else if((content = Math.floor(diffTime/(1000 * 60 * 60)))>0){
+                dateText = `Last deployed ${content} h ago`;
+            }else if((content = Math.floor(diffTime/(1000 * 60)))>0){
+                dateText = `Last deployed ${content} min ago`;
+            }else{
+                dateText = `Last deployed ${Math.floor(diffTime/1000)} secs ago`
+            }
+
+
             item1.textContent = dataProgLanguage
-            item2.textContent = `Last deploy 3h ago`
+            item2.textContent = dateText
             item3.textContent = `Kenya`
             
             detailsSection2List.appendChild(item1)
@@ -89,6 +156,8 @@ function getAllProjects(){
 
             nameSection2Span.textContent = `Visit Site`
             detailsSection1Icon.className = "fab fa-github";
+
+            detailsSection1Icon.style.padding = 5+"px";
 
 
             nameSection1.appendChild(nameSection1Icon);
@@ -162,11 +231,16 @@ projectButton.addEventListener("click",addNewProject);
 //SEARCH FOR PROJECTS
 const searchButton = document.getElementById("searchButton");
 const notFound = document.querySelector(".notFound");
-const projectsSection  = document.querySelector('.projectsSection');
+
 
 function fetchProjects(){
 
     let projName = document.getElementById("searchValue").value;
+
+    if(projName == ""){
+        getAllProjects()
+        return
+    }
 
     let apiURL = `http://localhost:8080/design-to-code/project/${projName}`
 
@@ -229,10 +303,30 @@ function fetchProjects(){
             let str1 = data.programmingLanguage.toString();
             let dataProgLanguage = str1.charAt(0).toUpperCase() + str1.slice(1)
 
-            let date = data.deployTime
+            //CALCULATE LAST DEPLOYED DATE
+            let date = new Date(data.deployTime)
+
+            let date2 = new Date()
+
+            let var1 = date2.getTime()
+
+            const diffTime = Math.abs(var1 - date);
+            let content;
+            let dateText
+            if((content = Math.floor(diffTime/(1000 * 60 * 60 *24 * 7)))>0){
+                dateText = `Last deployed ${content} w ago`;
+            }else if((content = Math.floor(diffTime/(1000 * 60 * 60 * 24)))>0){
+                dateText = `Last deployed ${content} d ago`;
+            }else if((content = Math.floor(diffTime/(1000 * 60 * 60)))>0){
+                dateText = `Last deployed ${content} h ago`;
+            }else if((content = Math.floor(diffTime/(1000 * 60)))>0){
+                dateText = `Last deployed ${content} min ago`;
+            }else{
+                dateText = `Last deployed ${Math.floor(diffTime/1000)} secs ago`
+            }
 
             item1.textContent = dataProgLanguage
-            item2.textContent = `Last deploy 3h ago`
+            item2.textContent = dateText
             item3.textContent = `Kenya`
             
             detailsSection2List.appendChild(item1)
@@ -247,6 +341,8 @@ function fetchProjects(){
 
             nameSection2Span.textContent = `Visit Site`
             detailsSection1Icon.className = "fab fa-github";
+
+            detailsSection1Icon.style.padding = 5+"px";
 
 
             nameSection1.appendChild(nameSection1Icon);
@@ -284,4 +380,4 @@ function fetchProjects(){
 
 searchButton.addEventListener("click",fetchProjects);
 
-window.onload = getAllProjects();
+window.onload = getAllProjects()

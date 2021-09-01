@@ -231,6 +231,24 @@ section div.projectsSection
     padding-top:20px;
     /* padding-bo:20px; */
 }
+span.sortCriteria
+{
+    display:none;
+    z-index:1;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+span.sortCriteria a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+span.sortCriteria a:hover
+{
+    background-color: #ddd;
+}
 div.projectsHeader
 {
     display:flex;
@@ -254,6 +272,18 @@ div.projectsHeader span.sort
     cursor: pointer;
     color:black;
     font-weight: bold;
+}
+div.projectsHeader span.sort:hover span.sortCriteria
+{
+    display:block;
+}
+.visible
+{
+    display:block;
+}
+.invisible
+{
+    display:none;
 }
 div.projectsHeader span.sort i
 {
