@@ -16,7 +16,7 @@ public class ProjectDAO {
     
     public void newProject(Project project){
 
-        String insertStatement = "INSERT INTO project VALUES (0,?,CURRENT_TIMESTAMP,?,34);";
+        String insertStatement = "INSERT INTO project VALUES (0,?,CURRENT_TIMESTAMP,?,NULL);";
 
         PreparedStatement prepStatement = dbDet.createStatement(insertStatement);
         try{
