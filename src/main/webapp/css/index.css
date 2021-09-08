@@ -39,7 +39,7 @@ header div.searchBar
     background-color:#5D69D0;
 
 }
-header div.searchBar form input
+header div.searchBar input
 {
     border:none;
     border-radius: 5px;
@@ -47,11 +47,11 @@ header div.searchBar form input
     outline:none;
     width:90%;
 }
-header div.searchBar form input::placeholder
+header div.searchBar input::placeholder
 {
     color:lightgrey;
 }
-header div.searchBar form button
+header div.searchBar button
 {
     padding-right:10px;
     padding-left:5px;
@@ -87,6 +87,57 @@ i#logo
     margin-left:25px;
     margin-bottom: 15px;
     color:#8993EF;
+}
+div.addProjectForm
+{
+    border:1px solid black;
+    border-radius:10px;
+    width:40%;
+    height:50vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    z-index:10;
+    position:absolute;
+    left:25%;
+    top:20%;
+    background-color:whitesmoke;
+    color:black;
+    font-weight:bold;
+    margin-left:-1500px;
+    transition-timing-function:ease-in-out;
+    transition-duration:0.5s;
+}
+
+div.addProjectForm input
+{
+    padding:2px;
+    margin:7px;
+}
+div.addProjectForm button
+{
+    border-radius:10px;
+    padding:8px;
+    width:25%;
+    margin:20px;
+    cursor:pointer;
+    /* background-color:aquamarine; */
+}
+div.addProjectForm i
+{
+    cursor: pointer;
+}
+div.notFound
+{
+    text-transform:uppercase;
+    position:absolute;
+    top:50%;
+    left:30%;
+    font-size:3rem;
+    font-weight:bold;
+    font-style:oblique;
+    visibility: hidden;
 }
 section#content
 {
@@ -180,6 +231,24 @@ section div.projectsSection
     padding-top:20px;
     /* padding-bo:20px; */
 }
+span.sortCriteria
+{
+    display:none;
+    z-index:1;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+span.sortCriteria a 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+}
+span.sortCriteria a:hover
+{
+    background-color: #ddd;
+}
 div.projectsHeader
 {
     display:flex;
@@ -203,6 +272,18 @@ div.projectsHeader span.sort
     cursor: pointer;
     color:black;
     font-weight: bold;
+}
+div.projectsHeader span.sort:hover span.sortCriteria
+{
+    display:block;
+}
+.visible
+{
+    display:block;
+}
+.invisible
+{
+    display:none;
 }
 div.projectsHeader span.sort i
 {

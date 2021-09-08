@@ -17,10 +17,10 @@
             </div>
 
             <div class="searchBar">
-                <form action="">
-                   <button><i class="fas fa-search"></i></button>
-                    <input type="text" placeholder="Search projects"/>
-                </form>
+                
+                   <button id="searchButton"><i class="fas fa-search"></i></button>
+                    <input id="searchValue" type="text" placeholder="Search projects"/>
+                
             </div>
 
             <div class="nav">
@@ -33,6 +33,17 @@
             </nav>
             </div>
         </header>
+
+        <div class="addProjectForm">
+            Project Name : <input type="text" id="projectName">
+            Project Language : <input type="text" id="projectLang">
+            <button id = "projectButton">Add Project</button>
+            <i class="fas fa-times fa-1x" id="closeForm"></i>
+        </div>
+
+        <div class="notFound">
+            no projects found
+        </div>
 
         <section id="content">
 
@@ -66,10 +77,14 @@
                         <i class="fas fa-sort-amount-up"></i>
                         Sort
                         <i class="fas fa-chevron-down"></i>
+                        <span class="sortCriteria">
+                            <a id="lastModified" class="visible">Last Modified</a>
+                            <a id="firstModified" class="invisible">First Modified</a>
+                        </span>
                     </span>
                 </div>
 
-                <div class="projects">
+                <!-- <div class="projects">
 
                     <div class="projectName">
                         <span class="section1">
@@ -206,11 +221,11 @@
                     <div class="projectName">
                         <span class="section1">
                             <i class="far fa-dot-circle active"></i>
-                            Talk Slides
+                            <span>Talk Slides</span>
                         </span>
 
                         <span class="section2">
-                            Visit site
+                            <span>Visit site</span>
                             <i class="fas fa-star starred"></i>
                         </span>
 
@@ -220,7 +235,7 @@
 
                         <span class="section1">
                             <i class="fab fa-github"></i>
-                            debbielewis/talk-slides
+                            <span>debbielewis/talk-slides</span>
                         </span>
 
                         <span class="section2">
@@ -266,7 +281,7 @@
                     </div>
 
                 
-                </div>
+                </div> -->
 
                 
             </div>
@@ -377,4 +392,6 @@
             </div>
         </section>
     </body>
+
+    <script src="js/project.js"></script>
 </html>
